@@ -63,7 +63,7 @@ h3 {
   font-weight: 400;
 
   &.lg-heading {
-    font-size: 6rem;
+    font-size: 4rem;
   }
 
   &.sm-heading {
@@ -248,7 +248,7 @@ main {
 
 //delay each nav item slide by 0.1 sec
 
-@for $x from 1 through 4 {
+@for $x from 1 through 6 {
   .nav-item:nth-child(#{$x}) {
     transition-delay: $x * 0.1s;
   }
@@ -363,21 +363,19 @@ main {
 // CONTACT PAGE CSS
 
 .boxes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-top: 3rem;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
 
   div {
-    font-size: 2rem;
-    border: 3px #fff solid;
-    padding: 1.5rem 2.5rem;
-    margin-bottom: 3rem;
+    font-size: 1rem;
+    border: 2px #fff solid;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
     @include easeOut;
 
     &:hover {
-      padding: 0.5rem 1.5rem;
+      // padding: 0.5rem 1.5rem;
       background: $secondary-color;
       color: set-text-color($secondary-color);
       span {
@@ -393,6 +391,115 @@ main {
   background: darken($color: $primary-color, $amount: 10);
   color: set-text-color($primary-color);
   height: 60px;
+}
+
+//SKILLS PAGE CSS
+
+.skills {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas: "personalskills technicalskills";
+
+  grid-template-columns: 1fr;
+
+  h3 {
+    color: $secondary-color;
+  }
+}
+
+@-webkit-keyframes html {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+@keyframes css {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+@keyframes js {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+@keyframes jquery {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 60%;
+  }
+}
+
+.skill {
+  background: lighten($color: $primary-color, $amount: 5);
+  padding: 0.5rem;
+  border-bottom: $secondary-color 5px solid;
+
+  .personal-skill {
+    grid-area: personalskills;
+  }
+
+  .technical-skill {
+    grid-area: technicalskills;
+  }
+}
+
+.progress-bar {
+  list-style: none;
+  width: 500px;
+  margin-left: 60px auto;
+  color: white;
+}
+
+.progress-bar li {
+  margin: 20px 0;
+}
+
+.bar {
+  background: #353b48;
+  display: block;
+  height: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 0 10px #2187e7b3;
+}
+
+.bar span {
+  height: 2px;
+  float: left;
+  background: #2187e7;
+}
+
+.html {
+  width: 80%;
+  -webkit-animation: html 2s;
+}
+
+.css {
+  width: 90%;
+  animation: css 2s;
+}
+.js {
+  width: 70%;
+  animation: js 2s;
+}
+.jquery {
+  width: 60%;
+  animation: jquery 2s;
 }
 
 // MEDIA QUERY MIXINS
@@ -425,11 +532,19 @@ main {
   .projects {
     grid-template-columns: repeat(4, 1fr);
   }
+
+  .boxes {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 // Desktops and Laptops
 @include mediaLg {
   .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .boxes {
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -443,6 +558,14 @@ main {
     .lg-heading {
       line-height: 1;
       margin-bottom: 1rem;
+    }
+
+    .skills {
+      grid-template-areas:
+        "personalskills"
+        "technicalskills";
+
+      grid-template-columns: 1fr;
     }
   }
 
@@ -492,6 +615,10 @@ main {
   .projects {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .boxes {
+    grid-template-columns: 1fr;
+  }
 }
 
 // Smartphones
@@ -512,6 +639,10 @@ main {
   }
 
   .projects {
+    grid-template-columns: 1fr;
+  }
+
+  .boxes {
     grid-template-columns: 1fr;
   }
 }
