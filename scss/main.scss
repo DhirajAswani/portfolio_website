@@ -388,6 +388,21 @@ main {
   h2 {
     margin-bottom: 0.5rem;
   }
+
+  border: 2px #fff solid;
+  padding: 2rem 2rem;
+  margin-bottom: 2rem;
+  @include easeOut;
+
+  &:hover {
+    // padding: 0.5rem 1.5rem;
+    // background: $secondary-color;
+    // color: set-text-color($secondary-color);
+    box-shadow: 15px 15px 15px black;
+    span {
+      // color: set-text-color($secondary-color);
+    }
+  }
 }
 
 //BUTTON STYLES

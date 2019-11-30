@@ -253,8 +253,15 @@ main {
       border-color: #eece1a;
       transition: all 0.5s ease-out; }
 
-.item h2 {
-  margin-bottom: 0.5rem; }
+.item {
+  border: 2px #fff solid;
+  padding: 2rem 2rem;
+  margin-bottom: 2rem;
+  transition: all 0.5s ease-out; }
+  .item h2 {
+    margin-bottom: 0.5rem; }
+  .item:hover {
+    box-shadow: 15px 15px 15px black; }
 
 .btn, .btn-dark, .btn-light {
   display: inline-block;
