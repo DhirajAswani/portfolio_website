@@ -355,14 +355,36 @@ main {
     background: lighten($color: $primary-color, $amount: 5);
     padding: 0.5rem;
     border-bottom: $secondary-color 5px solid;
+    // border: 10px 10px 10px black;
   }
 }
 
-.left {
-  display: inline-block;
+.nested {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-auto-rows: minmax(60px, auto);
+  /*grid-auto-columns: minmax(auto , 50px);*/
 }
-.right {
-  display: inline-block;
+
+.nested > div {
+  font-size: 1rem;
+
+  border: #333 1px black;
+}
+
+.cursive {
+  font-family: "Courgette", cursive;
+}
+
+.border-shadow {
+}
+
+.border-right {
+  padding-bottom: 2px;
+  padding-right: 2px;
+  border-right: 2px solid $secondary-color;
+  border-bottom: 2px solid $secondary-color;
+  border-radius: 5px;
 }
 
 // WORK PAGE CSS
@@ -837,5 +859,14 @@ main {
   }
   .right {
     display: inline-block;
+  }
+
+  .nested {
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(40px, auto);
+  }
+
+  .cursive {
+    font-family: "Courgette", cursive;
   }
 }
