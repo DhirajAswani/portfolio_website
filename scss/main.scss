@@ -29,6 +29,7 @@ $background-opacity: 0.8;
       background: $home_image;
       background-attachment: fixed;
       background-size: cover;
+      background-repeat: no-repeat;
     }
 
     .overlay {
@@ -235,7 +236,6 @@ main {
         height: 250px;
         border-radius: 50%;
         border: solid 3px $secondary-color;
-        background-repeat: no-repeat;
       }
     }
   }
@@ -377,9 +377,6 @@ main {
   font-family: "Courgette", cursive;
 }
 
-.border-shadow {
-}
-
 .border-right {
   padding-bottom: 2px;
   padding-right: 2px;
@@ -422,9 +419,6 @@ main {
     // background: $secondary-color;
     // color: set-text-color($secondary-color);
     box-shadow: 15px 15px 15px black;
-    span {
-      // color: set-text-color($secondary-color);
-    }
   }
 }
 
