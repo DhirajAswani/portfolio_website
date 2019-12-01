@@ -28,8 +28,8 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
   body#bg-img {
-    background: url(../img/background.jpg) center center;
-    background-attachment: fixed;
+    background: url(../img/background.jpg) no-repeat top center fixed;
+    background-attachment: scroll;
     background-size: 100vmax 100vmax; }
   body .overlay {
     position: absolute;
@@ -108,6 +108,7 @@ main {
       transform: rotate(-45deg) translate(7px, -6px); }
 
 .menu {
+  opacity: 1;
   position: fixed;
   top: 0;
   width: 100%;
