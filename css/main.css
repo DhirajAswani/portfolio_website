@@ -28,7 +28,7 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
   body#bg-img {
-    background: url(../img/background.jpg) no-repeat top center fixed;
+    background: url(../img/background2.jpg) center center;
     background-attachment: fixed;
     background-size: 100vmax 100vmax; }
   body .overlay {
