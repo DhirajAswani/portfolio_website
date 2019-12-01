@@ -29,7 +29,8 @@ body {
   line-height: 1.5; }
   body#bg-img {
     background: url(../img/background.jpg) center center;
-    background-size: stretch; }
+    background-attachment: fixed;
+    background-size: 100vmax 100vmax; }
   body .overlay {
     position: absolute;
     top: 0;
@@ -107,7 +108,6 @@ main {
       transform: rotate(-45deg) translate(7px, -6px); }
 
 .menu {
-  opacity: 0.9;
   position: fixed;
   top: 0;
   width: 100%;
@@ -275,7 +275,7 @@ main {
   .item h2 {
     margin-bottom: 0.5rem; }
   .item:hover {
-    box-shadow: 15px 15px 15px black; }
+    box-shadow: 5px 5px 5px black; }
 
 .btn, .btn-dark, .btn-light {
   display: inline-block;
@@ -450,7 +450,7 @@ main {
     .boxes div:hover {
       background: #eece1a;
       color: #000;
-      box-shadow: 20px 20px 20px; }
+      box-shadow: 5px 5px 5px; }
       .boxes div:hover span {
         color: #000; }
 
