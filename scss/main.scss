@@ -27,8 +27,8 @@ $background-opacity: 0.8;
   @if $show_home_image {
     &#bg-img {
       background: $home_image;
-      // background-attachment: scroll;
-      background-size: stretch;
+      background-attachment: fixed;
+      background-size: 100vmax 100vmax;
       // background-repeat: no-repeat;
     }
 

@@ -29,7 +29,8 @@ body {
   line-height: 1.5; }
   body#bg-img {
     background: url(../img/background.jpg) center center;
-    background-size: stretch; }
+    background-attachment: fixed;
+    background-size: 100vmax 100vmax; }
   body .overlay {
     position: absolute;
     top: 0;
