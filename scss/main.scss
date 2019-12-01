@@ -4,7 +4,7 @@
 $primary-color: #444;
 $secondary-color: #eece1a;
 $show_home_image: true;
-$home_image: url(../img/background2.jpg) center center;
+$home_image: url(../img/background.jpg) center center;
 $background-opacity: 0.8;
 
 .text-secondary {
@@ -27,8 +27,8 @@ $background-opacity: 0.8;
   @if $show_home_image {
     &#bg-img {
       background: $home_image;
-      background-attachment: fixed;
-      background-size: 100vmax 100vmax;
+      // background-attachment: scroll;
+      background-size: stretch;
       // background-repeat: no-repeat;
     }
 
