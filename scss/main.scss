@@ -4,7 +4,7 @@
 $primary-color: #444;
 $secondary-color: #eece1a;
 $show_home_image: true;
-$home_image: url(../img/background.jpg);
+$home_image: url(../img/background.jpg) center center;
 $background-opacity: 0.8;
 
 .text-secondary {
@@ -29,7 +29,7 @@ $background-opacity: 0.8;
       background: $home_image;
       background-attachment: fixed;
       background-size: cover;
-      background-repeat: no-repeat;
+      // background-repeat: no-repeat;
     }
 
     .overlay {
@@ -73,6 +73,7 @@ $background-opacity: 0.8;
 body {
   @include background;
   background: $primary-color;
+  background-size: 100%;
   color: set-text-color($primary-color);
   height: 100%;
   margin: 0;
