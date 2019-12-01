@@ -182,7 +182,7 @@ main {
 // MENU OVERLAY
 
 .menu {
-  opacity: 0.9;
+  // opacity: 1;
   position: fixed;
   top: 0;
   width: 100%;
@@ -419,7 +419,7 @@ main {
     // padding: 0.5rem 1.5rem;
     // background: $secondary-color;
     // color: set-text-color($secondary-color);
-    box-shadow: 15px 15px 15px black;
+    box-shadow: 5px 5px 5px black;
   }
 }
 
@@ -622,7 +622,7 @@ main {
       // padding: 0.5rem 1.5rem;
       background: $secondary-color;
       color: set-text-color($secondary-color);
-      box-shadow: 20px 20px 20px;
+      box-shadow: 5px 5px 5px;
       span {
         color: set-text-color($secondary-color);
       }
