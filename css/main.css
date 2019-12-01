@@ -21,16 +21,16 @@
 
 body {
   background: #444;
+  background-size: 100%;
   color: #fff;
   height: 100%;
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
   body#bg-img {
-    background: url(../img/background.jpg);
+    background: url(../img/background.jpg) center center;
     background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat; }
+    background-size: cover; }
   body .overlay {
     position: absolute;
     top: 0;
